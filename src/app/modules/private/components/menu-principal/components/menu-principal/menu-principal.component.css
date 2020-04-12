@@ -1,0 +1,25 @@
+.container-padrao {
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.legenda-popular {
+  font-weight: bolder;
+  font-size: 36px;
+  color: white;
+  padding-bottom: 0.3em;
+}
+
+.legenda-buscar {
+  font-weight: bolder;
+  font-size: 36px;
+  color: white;
+  padding-bottom: 0.1em;
+  padding-top: 0.3em;
+  text-align: center;
+}
+
+input[type="text"] {
+  background-color : #d4d4d4 !important;
+  border-color: black;
+}
