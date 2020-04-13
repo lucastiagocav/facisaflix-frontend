@@ -1,10 +1,10 @@
-# FacisaflixFrontend
+# FACISAFLIX
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
+Projeto criado utilizando o framework [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
-## Development server
+## Subindo o projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Após o download do projeto, no prompt de comando do repositório, digitar: `ng serve` para subir uma versão local do projeto. Navegue no seguinte link: `http://localhost:4200/`. O aplicativo é automaticamente recarregado caso você faça alterações e as salve.
 
 ## Code scaffolding
 
