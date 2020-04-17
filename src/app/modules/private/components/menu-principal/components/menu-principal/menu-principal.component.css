@@ -9,3 +9,20 @@
   color: white;
   padding-bottom: 0.3em;
 }
+
+.categoria {
+  font-weight: bolder;
+}
+
+.far {
+  color: white;
+  padding-right: 1em;
+}
+
+.fas {
+  color: white;
+  padding-right: 1em;
+}
+.buttons {
+  text-align: end;
+}
