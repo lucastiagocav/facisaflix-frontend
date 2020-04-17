@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrivateModule } from './modules/private/private.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { PrivateModule } from './modules/private/private.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PrivateModule
+    PrivateModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })
