@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  urlDefault: 'http://localhost:8080/facisaflix-backend/api/v1',
   production: false
 };
 
