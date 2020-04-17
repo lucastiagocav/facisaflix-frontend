@@ -1,11 +1,36 @@
 <div class="container-padrao">
-  <div class="legenda-popular">
-    <a>
-      Populares no Facisaflix
-    </a>
+  <a class="legenda-popular">Recomendados</a>
+  <div class="row">
+    <div class="col-2 mb-4">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="../../../../../../../assets/filme-5.png" alt="Imagem de capa do card">
+        <div class="card-body">
+          <p class="card-title">JOKER</p>
+          <p class="card-text">Um exemplo de descrição de filmes.</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="row row-cols-1 row-cols-md-2">
-    <div class="col mb-4">
+
+  <a class="legenda-popular">Populares no Facisaflix</a>
+  <div class="row">
+    <div class="col-4 mb-4">
+      <div class="card">
+        <img src="../../../../../../../assets/filme-5.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">JOKER</h5>
+          <p class="card-text categoria">{{categoria}}</p>
+          <p class="card-text">{{descricaoFilme}}</p>
+          <div class="buttons">
+            <span class="far fa-thumbs-up" *ngIf="clickLike === false" (click)="likeFilm()"></span>
+            <span class="fas fa-thumbs-up" *ngIf="clickLike === true"></span>
+            <span class="far fa-thumbs-down" *ngIf="clickDeslike === false" (click)="deslikeFilm()"></span>
+            <span class="fas fa-thumbs-down" *ngIf="clickDeslike === true"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 mb-4">
       <div class="card">
         <img src="../../../../../../../assets/filme-5.png" class="card-img-top" alt="...">
         <div class="card-body">
@@ -14,7 +39,7 @@
         </div>
       </div>
     </div>
-    <div class="col mb-4">
+    <div class="col-4 mb-4">
       <div class="card">
         <img src="../../../../../../../assets/filme-5.png" class="card-img-top" alt="...">
         <div class="card-body">
@@ -23,16 +48,7 @@
         </div>
       </div>
     </div>
-    <div class="col mb-4">
-      <div class="card">
-        <img src="../../../../../../../assets/filme-5.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">JOKER</h5>
-          <p class="card-text">{{descricaoFilme}}</p>
-        </div>
-      </div>
-    </div>
-    <div class="col mb-4">
+    <div class="col-4 mb-4">
       <div class="card">
         <img src="../../../../../../../assets/filme-5.png" class="card-img-top" alt="...">
         <div class="card-body">
