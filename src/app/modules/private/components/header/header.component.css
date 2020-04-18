@@ -9,11 +9,4 @@
   padding-bottom: 0.3em;
 }
 
-input[type="search"] {
-  background-color : #d4d4d4 !important;
-  border-color: black;
-}
-.btn-custom {
-  font-weight: bolder;
-}
-.form-inline {}
+
