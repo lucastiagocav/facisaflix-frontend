@@ -1,3 +1,6 @@
-.alinhamento {
-  padding-top: 0.5em !important;
+.fab {
+  font-size: 2em;
+  padding-right: 1em;
+  color: white;
+  text-decoration: none;
 }
