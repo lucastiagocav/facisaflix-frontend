@@ -1,62 +1,66 @@
 <div class="container-padrao">
-  <a class="legenda-popular">Recomendados</a>
-  <div class="row">
-    <div class="col-2 mb-4">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="../../../../../../../assets/filme-5.png" alt="Imagem de capa do card">
-        <div class="card-body">
-          <p class="card-title">JOKER</p>
-          <p class="card-text">Um exemplo de descrição de filmes.</p>
-        </div>
-      </div>
+  <ngx-spinner></ngx-spinner>
+  <form [formGroup]="searchForm" class="row">
+    <div class="col-6 mb-4 input-field">
+      <input class="form-control mr-sm-2" type="search" formControlName="search" placeholder="Buscar filme">
     </div>
-  </div>
-
-  <a class="legenda-popular">Populares no Facisaflix</a>
-  <div class="row">
-    <div class="col-4 mb-4">
-      <div class="card">
-        <img src="../../../../../../../assets/filme-5.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">JOKER</h5>
-          <p class="card-text categoria">{{categoria}}</p>
-          <p class="card-text">{{descricaoFilme}}</p>
-          <div class="buttons">
-            <span class="far fa-thumbs-up" *ngIf="clickLike === false" (click)="likeFilm()"></span>
-            <span class="fas fa-thumbs-up" *ngIf="clickLike === true"></span>
-            <span class="far fa-thumbs-down" *ngIf="clickDeslike === false" (click)="deslikeFilm()"></span>
-            <span class="fas fa-thumbs-down" *ngIf="clickDeslike === true"></span>
+    <div class="col-1 mr-3">
+      <button class="btn btn-dark" type="button" (click)="filmSearch()">Buscar</button>
+    </div>
+  </form>
+  <div class="filtro-pesquisa" *ngIf="listaPesquisa">
+    <div class="legenda-principal">
+      <a>Resultado da pesquisa</a>
+    </div>
+    <div class="row">
+      <div class="col-3 mb-4" *ngFor="let item of listaPesquisa">
+        <div class="card">
+          <img src="{{item.urlImg}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{item.filme}}</h5>
+            <p class="card-text categoria">{{item.categoria}}</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-4 mb-4">
-      <div class="card">
-        <img src="../../../../../../../assets/filme-5.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">JOKER</h5>
-          <p class="card-text">{{descricaoFilme}}</p>
-        </div>
-      </div>
+  </div>
+
+  <div class="recomendacoes" *ngIf="clickLike === true && clickDeslike === false && listaRecomendacoes">
+    <div class="legenda-principal">
+      <a>Recomendações</a>
     </div>
-    <div class="col-4 mb-4">
-      <div class="card">
-        <img src="../../../../../../../assets/filme-5.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">JOKER</h5>
-          <p class="card-text">{{descricaoFilme}}</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-4 mb-4">
-      <div class="card">
-        <img src="../../../../../../../assets/filme-5.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">JOKER</h5>
-          <p class="card-text">{{descricaoFilme}}</p>
+    <div class="row">
+      <div class="row">
+        <div class="col-3 mb-4" *ngFor="let item of listaRecomendacoes">
+          <div class="card">
+            <img src="{{item.urlImg}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{item.filme}}</h5>
+              <p class="card-text categoria">{{item.categoria}}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="legenda-principal">
+    <a>Populares no Facisaflix</a>
+  </div>
+  <div class="row">
+    <div class="col-4 mb-4" *ngFor="let item of listaFilmes">
+      <div class="card">
+        <img src="{{item.urlImg}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.filme}}</h5>
+          <p class="card-text categoria">{{item.categoria}}</p>
+          <div class="buttons">
+            <span class="far fa-thumbs-up" (click)="likeFilm()"></span>
+            <span class="far fa-thumbs-down" (click)="deslikeFilm()"></span>
+          </div>
+          <p class="card-text">{{item.descricao}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

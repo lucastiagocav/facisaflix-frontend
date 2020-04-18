@@ -3,11 +3,11 @@
   padding-top: 2em;
 }
 
-.legenda-popular {
+.legenda-principal {
   font-weight: bolder;
   font-size: 36px;
   color: white;
-  padding-bottom: 0.3em;
+  padding-bottom: 0.5em;
 }
 
 .categoria {
@@ -25,4 +25,14 @@
 }
 .buttons {
   text-align: end;
+}
+
+.card-body {
+  font-size: small;
+}
+
+.input-field {
+  margin-left: auto;
+  margin-bottom: 3em;
+  padding: 0px 0px;
 }
