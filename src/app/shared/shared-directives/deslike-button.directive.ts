@@ -10,9 +10,6 @@ export class DeslikeButtonDirective implements ControlValueAccessor {
   isDisabled: boolean;
 
   constructor(private element: ElementRef) {
-
-    this.dislikeIcon();
-    console.log(this.onChange);
   }
 
   writeValue() {
@@ -26,10 +23,6 @@ export class DeslikeButtonDirective implements ControlValueAccessor {
 
   registerOnTouched(fn: any): void {
     this.onTouched = fn;
-  }
-
-  private dislikeIcon() {
-    this.element.nativeElement.setAttribute('class', 'far far-heart');
   }
 
 }
