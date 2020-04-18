@@ -25,7 +25,7 @@ GIT
 </p>
 
 ## Configurando o projeto
-Após o download do projeto, no prompt de comando do repositório, digitar: `ng serve` para subir uma versão local do projeto. Navegue no seguinte link: `http://localhost:4200/`. O aplicativo é automaticamente recarregado caso você faça alterações e as salve.
+Após o download do projeto, no prompt de comando do repositório, entrar na pasta raiz e digitar `npm i` para instalar as dependências, digitar: `ng serve` para subir uma versão local do projeto. Navegue no seguinte link: `http://localhost:4200/`. O aplicativo é automaticamente recarregado caso você faça alterações e as salve.
 
 ## Técnica para geração de códigos no framework Angular CLI.
 
