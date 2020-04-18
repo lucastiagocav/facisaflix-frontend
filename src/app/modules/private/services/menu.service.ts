@@ -18,4 +18,8 @@ export class MenuService {
   recuperarFilmes(): Observable<ListaFilmesModel[]> {
     return this.http.get<ListaFilmesModel[]>(`${this.url}/filmes/`);
   }
+
+  buscarFilme(queryParams): Observable<ListaFilmesModel[]> {
+    return this.http.get<ListaFilmesModel[]>(`${this.url}/filmes/buscar/${queryParams}`);
+  }
 }
