@@ -19,9 +19,12 @@ ANGULAR-CLI
 ```
 GIT
 ```
+## Printscreen
+<p align="center">
+  <img width="100%" src="https://user-images.githubusercontent.com/43700627/79632367-0a0b8b80-8135-11ea-9801-30d9912ddfe5.png">
+</p>
 
 ## Configurando o projeto
-
 Após o download do projeto, no prompt de comando do repositório, digitar: `ng serve` para subir uma versão local do projeto. Navegue no seguinte link: `http://localhost:4200/`. O aplicativo é automaticamente recarregado caso você faça alterações e as salve.
 
 ## Técnica para geração de códigos no framework Angular CLI.
