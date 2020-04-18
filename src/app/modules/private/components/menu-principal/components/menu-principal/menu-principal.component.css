@@ -23,6 +23,7 @@
   color: white;
   padding-right: 1em;
 }
+
 .buttons {
   text-align: end;
 }
@@ -35,4 +36,11 @@
   margin-left: auto;
   margin-bottom: 3em;
   padding: 0px 0px;
+}
+
+.card-populares{
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
 }

@@ -35,5 +35,8 @@
 }
 
 ::ng-deep .card-img-top {
-  height: auto;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
 }

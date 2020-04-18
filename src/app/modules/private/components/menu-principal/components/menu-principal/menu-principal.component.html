@@ -8,36 +8,19 @@
       <button class="btn btn-dark" type="button" (click)="filmSearch()">Buscar</button>
     </div>
   </form>
-  <div class="filtro-pesquisa" *ngIf="listaPesquisa">
+  <div class="filtro-pesquisa" *ngIf="itemRecuperado">
     <div class="legenda-principal">
       <a>Resultado da pesquisa</a>
     </div>
     <div class="row">
-      <div class="col-3 mb-4" *ngFor="let item of listaPesquisa">
+      <div class="col-3 mb-4">
         <div class="card">
-          <img src="{{item.urlImg}}" class="card-img-top" alt="...">
+          <img src="{{itemRecuperado.urlImg}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">{{item.filme}}</h5>
-            <p class="card-text categoria">{{item.categoria}}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+            <h5 class="card-title">{{itemRecuperado.filme}}</h5>
+            <p class="card-text categoria">{{itemRecuperado.categoria}}</p>
+            <p class="card-text">{{itemRecuperado.descricao}}</p>
 
-  <div class="recomendacoes" *ngIf="clickLike === true && clickDeslike === false && listaRecomendacoes">
-    <div class="legenda-principal">
-      <a>Recomendações</a>
-    </div>
-    <div class="row">
-      <div class="row">
-        <div class="col-3 mb-4" *ngFor="let item of listaRecomendacoes">
-          <div class="card">
-            <img src="{{item.urlImg}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{item.filme}}</h5>
-              <p class="card-text categoria">{{item.categoria}}</p>
-            </div>
           </div>
         </div>
       </div>
@@ -49,7 +32,7 @@
   </div>
   <div class="row">
     <div class="col-3 mb-4" *ngFor="let item of listaFilmes">
-      <div class="card">
+      <div class="card card-populares">
         <img src="{{item.urlImg}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{item.filme}}</h5>

@@ -19,7 +19,30 @@ export class MenuService {
     return this.http.get<ListaFilmesModel[]>(`${this.url}/filmes/`);
   }
 
-  buscarFilme(queryParams): Observable<ListaFilmesModel[]> {
-    return this.http.get<ListaFilmesModel[]>(`${this.url}/filmes/buscar/${queryParams}`);
+  buscarFilme(queryParams): Observable<ListaFilmesModel> {
+    return this.http.get<ListaFilmesModel>(`${this.url}/filmes/buscar`, {
+      params: this.httpParamsByObjeto(queryParams)
+    });
   }
+
+  httpParamsByObjeto(objeto: object): {
+    [param: string]: string | string[]
+  } {
+    const httpParams: {
+      [param: string]: string | string[];
+    } = {};
+    if (objeto != null) {
+      // tslint:disable-next-line:forin
+      for (const key in objeto) {
+        const parametro = objeto[key];
+        if (parametro !== null && parametro !== 'null' && parametro !== 'undefined' && parametro !== undefined) {
+          if (String(parametro).trim()) {
+            httpParams[key] = String(objeto[key]);
+          }
+        }
+      }
+    }
+    return httpParams;
+  }
+
 }
