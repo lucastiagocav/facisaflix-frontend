@@ -24,9 +24,9 @@ GIT
 
 Após o download do projeto, no prompt de comando do repositório, digitar: `ng serve` para subir uma versão local do projeto. Navegue no seguinte link: `http://localhost:4200/`. O aplicativo é automaticamente recarregado caso você faça alterações e as salve.
 
-## Code scaffolding
+## Técnica para geração de códigos no framework Angular CLI.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Execute o comando `ng generate component component-name` Para criação de um novo componente. Você também poderá usar `ng generate directive|pipe|service|class|guard|interface|enum|module` para a geração de outros elementos, pipes, diretivas, services, entre outros.
 
 ## Autor do projeto
 * **Lucas Silva** - *Criador do projeto* - [Lucas Silva Github](https://github.com/lucastiagocav)
